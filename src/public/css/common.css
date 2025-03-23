@@ -1,0 +1,52 @@
+html,
+body {
+    height: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    background: #ffffff;
+}
+
+.header__inner {
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    align-items: center;
+    display: flex;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #F5C800;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: serif;
+}
+
+/* コンテンツ */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 20px;
+    background: #f8f8f8;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}

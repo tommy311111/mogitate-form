@@ -1,0 +1,66 @@
+
+.products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.products-header h2 {
+    margin: 0;
+}
+
+.add-product-btn {
+    background-color: #FFA929;
+    padding: 4px 20px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.add-product-btn:hover {
+    background-color: #DF9425;
+}
+
+
+.products-body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /* 5分の1 (1fr) : 5分の4 (4fr) */
+    gap: 16px;
+    /* 要素間の間隔 */
+}
+
+/* 🔹 検索パネルのデザイン */
+.search-panel {
+    background: #f8f9fa;
+    /* 背景色 */
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 商品グリッドのデザイン */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* 自動調整 */
+    gap: 16px;
+    /* 商品の間隔 */
+}
+
+/* 🔹 商品カード */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🔹 画像サイズ調整 */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
