@@ -1,0 +1,160 @@
+ .container {
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+ }
+ 
+ h2 {
+     margin-bottom: 20px;
+ }
+
+.label-container {
+    display: flex;
+    align-items: center;
+    /* 高さを揃える */
+    gap: 14px;
+    /* 隙間を少し開ける */
+    margin-top: 14px;
+}
+
+ label {
+    display: inline-block;
+    margin: 0;
+        /* 余計なマージンを削除 */
+        font-size: 16px;
+        /* フォントサイズを統一 */
+        line-height: 1.5;
+        /* 行の高さを調整 */
+ }
+
+ .required {
+     color: #ffffff;
+     background-color: red;
+     border: none;
+     padding: 2px 4px;
+        /* 高さを適度に確保 */
+        font-size: 12px;
+    line-height: 1.5;
+        /* 行の高さを label と統一 */
+        display: flex;
+        align-items: center;
+        /* 内部の文字を中央揃え */
+        justify-content: center;
+ }
+
+ .optional {
+     color: red;
+     /* 赤文字 */
+     font-size: 14px;
+     /* 必要に応じてフォントサイズ調整 */
+     margin-left: 10px;
+     /* 必須との間に隙間を入れる */
+ }
+
+ input,
+ textarea {
+     width: 100%;
+     padding: 8px;
+     margin-top: 8px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+
+/* ファイル入力の横のテキストを非表示にする */
+input[type="file"] {
+    color: transparent;
+    /* 文字色を透明にして、選択されていないテキストを見えなくする */
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+    /* ボタン自体はクリック可能にする */
+}
+
+.checkbox-group {
+    display: flex;
+    /* 横並びにする */
+    flex-wrap: wrap;
+    /* ラベルが横に並びきれなかった場合に折り返す */
+    gap: 30px;
+    /* チェックボックスとラベルの間隔 */
+}
+
+.radio-style {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.radio-style input[type="checkbox"] {
+    appearance: none;
+    /* デフォルトのチェックボックスを消す */
+    width: 18px;
+    height: 18px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    /* 丸くする */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 5px;
+    background-color: #fff;
+        /* 背景色（未選択時は白） */
+}
+
+.radio-style input[type="checkbox"]:checked {
+    background-color: #4B4B4B;
+        /* チェックされたときの背景色（黒） */
+        border-color: #4B4B4B;
+        /* 枠線の色（黒） */
+}
+
+.radio-style input[type="checkbox"]:checked::before {
+    content: "✓";
+        /* チェックマークを表示 */
+        color: white;
+        /* チェックマークの色を白に */
+        font-size: 12px;
+        /* チェックマークのサイズ */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* チェックマークを中央に配置 */
+}
+
+ .button-group {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+     gap: 32px;
+ }
+
+.btn {
+    padding: 0px;
+    height: 40px;
+    width: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.back-btn {
+    background-color: #E0DFDE;
+}
+
+.back-btn:hover {
+    background-color: #e0dfdecc;
+}
+
+.submit-btn {
+    background-color: #F5C800;
+}
+
+.submit-btn:hover {
+    background-color: #DDB400;
+}

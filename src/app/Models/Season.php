@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Season extends Model
 {
     use HasFactory;
-
-    protected $guarded = [
+     protected $guarded = [
         'id',
     ];
 
-    public function seasons()
+    public function products()
     {
-        return $this->belongsToMany(Season::class, 'product_season');
+        return $this->belongsToMany(Product::class, 'product_season');
     }
 
 }

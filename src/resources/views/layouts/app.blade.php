@@ -14,7 +14,9 @@
  <div class="app">
   <header class="header">
     <div class="header__inner">
-      <a class="header__logo">mogitate</a>
+      <a class="header__logo" href="/products">
+        mogitate
+      </a>
     </div>
   </header>
 

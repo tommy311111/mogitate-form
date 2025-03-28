@@ -1,0 +1,211 @@
+.product-detail-container {
+    width: 50vw;
+        margin: 0 auto;
+        padding: 20px;
+}
+
+/* labelとinputの間隔を縮める */
+.product-detail-right label {
+    display: inline-block;
+    margin-bottom: 4px;
+    /* ラベルと入力フィールドの間隔 */
+    margin-top: 8px;
+}
+
+.product-detail-right input,
+.product-detail-right textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 既存の.product-detail-containerはそのまま */
+
+/* 上半分: 左右2カラム */
+.product-detail-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* 左側 */
+.product-detail-left {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    align-items: center;
+}
+
+.product-detail-left .breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product-detail-left .highlight {
+    color: #3Ea1FD;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.product-detail-left .product-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-detail-left .file-input {
+    display: block;
+    margin: 0;
+}
+
+/* 右側 */
+.product-detail-right {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    max-height: 280px;
+    margin-top: 30px;
+}
+
+.product-detail-right p {
+    font-size: 16px;
+}
+
+/* 季節リスト */
+.season-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    margin: 0;
+    align-items: center;
+}
+
+.season-list li {
+    display: flex;
+    gap: 8px;
+}
+
+.product-detail-right .season-list label {
+    margin-top: 0;
+}
+
+/* チェックボックスのスタイルをカスタマイズ */
+.season-list input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 5px;
+    background-color: #fff;
+    vertical-align: middle;
+}
+
+/* label にも垂直中央揃えを追加 */
+.season-list label {
+    display: inline-block;
+    vertical-align: middle;
+    /* label の垂直方向を中央に揃える */
+}
+
+/* チェックされた時のスタイル */
+.season-list input[type="checkbox"]:checked {
+    background-color: #4B4B4B;
+    border-color: #4B4B4B;
+}
+
+/* チェックされた時に✓を表示 */
+.season-list input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 下半分: 1カラム */
+.product-detail-bottom {
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: left;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.product-detail-bottom p {
+    font-size: 16px;
+}
+
+/* ボタン */
+.button-group {
+    display: flex;
+        justify-content: center;
+        
+        gap: 32px;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+        /* 横幅を均等に */
+    width: auto;
+}
+
+.left-buttons .btn {
+    padding: 0px;
+    height: 40px;
+    width: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.back-btn {
+    background-color: #E0DFDE;
+    margin-left: 180px;
+}
+
+.back-btn:hover {
+    background-color: #e0dfdecc;
+}
+
+.save-btn {
+    background-color: #F5C800;
+}
+
+.save-btn:hover {
+    background-color: #DDB400;
+}
+
+/* 右側の削除ボタン */
+.right-buttons {
+    display: flex;
+    justify-content: flex-end;
+    /* 右に寄せる */
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: auto;
+        /* 削除ボタンは幅を設定しない */
+}
+
+.trash-icon {
+    width: 20px;
+    height: 20px;
+}
