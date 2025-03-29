@@ -35,8 +35,8 @@ php artisan db:seed
 ```
 
 ## 使用技術(実行環境)
-- PHP8.3.0
-- Laravel8.83.27
+- PHP7.4.9
+- Laravel8.83.3
 - MySQL8.0.26
 
 ## ER図
