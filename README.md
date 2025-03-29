@@ -2,7 +2,7 @@
 
 ## 環境構築
 **Dockerビルド**
-1. `git clone git@github.com:estra-inc/confirmation-test-contact-form.git`
+1. `git clone git@github.com:tommy311111/mogitate-form.git`
 2. DockerDesktopアプリを立ち上げる
 3. `docker-compose up -d --build`
 
@@ -40,8 +40,9 @@ php artisan db:seed
 - MySQL8.0.26
 
 ## ER図
-![alt](erd.png)
+![erd](https://github.com/user-attachments/assets/c8624ea3-f6ea-4ac1-bf30-1dedb3c44f44)
+
 
 ## URL
-- 開発環境：http://localhost/
+- 開発環境：http://localhost/products
 - phpMyAdmin:：http://localhost:8080/
