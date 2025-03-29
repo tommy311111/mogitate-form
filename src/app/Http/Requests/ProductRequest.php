@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
     $isUpdate = request()->route('product') !== null; // 更新時かどうかを判定
 
     return [
-        'name' => 'required|string|max:255',
+        'name' => 'required|string|max:255|regex:/\D/',
         'price' => 'required|numeric|between:0,10000',
         'image' => [
             $isUpdate ? 'nullable' : 'required', // 更新時はnullable、新規作成時は必須
@@ -40,7 +40,7 @@ class ProductRequest extends FormRequest
                 }
             }
         ],
-        'description' => 'required|string|max:120',
+        'description' => 'required|string|max:120|regex:/\D/',
         'season' => 'required|array|min:1',
     ];
 }
@@ -52,7 +52,7 @@ class ProductRequest extends FormRequest
         'name.required' => '商品名を入力してください',
         'name.string' => '商品名は文字列で入力してください',
         'name.max' => '商品名は255文字以内で入力してくださ',
-        
+        'name.regex' => '商品名には少なくとも1文字以上の数字以外の文字を含めてください。',
         'price.required' => '値段を入力してください',
         'price.numeric' => '数値で入力してください',
         'price.between' => '0〜10000円以内で入力してください',
@@ -64,7 +64,7 @@ class ProductRequest extends FormRequest
         'description.required' => '商品説明を入力してください',
         'description.string' => '説明は文字列で入力してください',
         'description.max' => '説明は120文字以内で入力してください',
-        
+        'description.regex' => '商品説明には少なくとも1文字以上の数字以外の文字を含めてください。',
         'season.required' => '季節を選択してください',
         'season.min' => '季節を少なくとも1つ選択してください',
     ];
