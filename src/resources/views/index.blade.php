@@ -55,7 +55,21 @@
             <div class="pagination">
                 {{ $products->appends(request()->query())->links('vendor.pagination.custom') }}
             </div>
+<<<<<<< HEAD
         </div>
     </form>
 </div>
+=======
+            </a>
+            @endforeach
+        </section>
+
+        <!-- ページネーションをここに配置 -->
+        <div class="pagination">
+            {{ $products->appends(request()->query())->links('vendor.pagination.custom') }}
+        </div>
+    </div>
+</div>
+</form>
+>>>>>>> a7d43fd (add:docker設定ファイルを追加、laravelインストール)
 @endsection
