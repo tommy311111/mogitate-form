@@ -38,3 +38,11 @@ php artisan db:seed
 - PHP7.4.9
 - Laravel8.83.3
 - MySQL8.0.26
+
+## ER図
+
+![erd](https://github.com/user-attachments/assets/f5d46a0b-2aaf-4f59-9362-0b2fea09692c)
+
+## URL
+- 開発環境：http://localhost/
+- phpMyAdmin:：http://localhost:8080/
