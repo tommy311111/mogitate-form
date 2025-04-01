@@ -44,5 +44,5 @@ php artisan db:seed
 ![erd](https://github.com/user-attachments/assets/f5d46a0b-2aaf-4f59-9362-0b2fea09692c)
 
 ## URL
-- 開発環境：http://localhost/
+- 開発環境：http://localhost/products
 - phpMyAdmin:：http://localhost:8080/
