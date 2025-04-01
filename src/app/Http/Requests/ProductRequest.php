@@ -21,7 +21,7 @@ class ProductRequest extends FormRequest
      *
      * @return array
      */
-   public function rules()
+public function rules()
 {
     $isUpdate = request()->route('product') !== null; // 更新時かどうかを判定
 
@@ -34,9 +34,14 @@ class ProductRequest extends FormRequest
             'mimes:png,jpeg',
             'max:2048',
             function ($attribute, $value, $fail) use ($isUpdate) {
-                // 更新時、画像が空で、既存の画像もない場合はエラー
-                if ($isUpdate && empty($value) && !request()->route('product')->image) {
-                    $fail('商品画像を登録してください');
+                // 更新時、画像がアップロードされていないかつ既存の画像がある場合はエラーを避ける
+                if ($isUpdate) {
+                    $product = request()->route('product'); // ルートから商品情報を取得
+
+                    // 既存画像がなく、かつ新たに画像がアップロードされていない場合のみエラー
+                    if (!$product->image && !request()->hasFile('image')) {
+                        $fail('商品画像を登録してください');
+                    }
                 }
             }
         ],
@@ -44,6 +49,8 @@ class ProductRequest extends FormRequest
         'season' => 'required|array|min:1',
     ];
 }
+
+  
 
 
      public function messages()
