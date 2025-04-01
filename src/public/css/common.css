@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-        padding: 0;
+    padding: 0;
 }
 
 .app {
@@ -13,7 +13,6 @@ body {
 
 .main {
     flex-grow: 1;
-    /* メインコンテンツを広げる */
     display: flex;
     flex-direction: column;
 }
@@ -38,13 +37,11 @@ body {
     font-family: serif;
 }
 
-/* コンテンツ */
 .content {
     flex-grow: 1;
-        /* コンテンツ部分を広げる */
-        justify-content: center;
-        padding: 20px;
-        background: #f8f8f8;
+    justify-content: center;
+    padding: 20px;
+    background: #f8f8f8;
 }
 
 .error {
@@ -53,7 +50,6 @@ body {
     text-align: left;
 }
 
-/* ボタン */
 .btn {
     display: block;
     border: none;
@@ -66,7 +62,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input,textarea {
+input,
+textarea {
     border: 1px solid #E3E2E1;
     background-color: #ffffff;
     outline: none;
@@ -74,20 +71,15 @@ input,textarea {
     padding: 10px;
 }
 
-/* file input に対して特別なスタイルを追加 */
 input[type="file"] {
     border: none;
-    /* border を消す */
     background-color: transparent;
-    /* 背景色を透明に */
     outline: none;
-    /* outline を消す */
     box-shadow: none;
-    /* box-shadow を消す */
 }
 
-input::placeholder, 
-textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
     color: #E8E7E6;
 }
 

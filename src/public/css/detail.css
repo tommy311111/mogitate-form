@@ -1,14 +1,12 @@
 .product-detail-container {
     width: 50vw;
-        margin: 0 auto;
-        padding: 20px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* labelとinputの間隔を縮める */
 .product-detail-right label {
     display: inline-block;
     margin-bottom: 4px;
-    /* ラベルと入力フィールドの間隔 */
     margin-top: 8px;
 }
 
@@ -20,16 +18,12 @@
     border-radius: 4px;
 }
 
-/* 既存の.product-detail-containerはそのまま */
-
-/* 上半分: 左右2カラム */
 .product-detail-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-/* 左側 */
 .product-detail-left {
     display: grid;
     grid-template-rows: auto auto auto;
@@ -62,7 +56,6 @@
     margin: 0;
 }
 
-/* 右側 */
 .product-detail-right {
     display: grid;
     grid-template-rows: repeat(3, auto);
@@ -74,7 +67,6 @@
     font-size: 16px;
 }
 
-/* 季節リスト */
 .season-list {
     list-style: none;
     padding: 0;
@@ -94,7 +86,6 @@
     margin-top: 0;
 }
 
-/* チェックボックスのスタイルをカスタマイズ */
 .season-list input[type="checkbox"] {
     appearance: none;
     width: 18px;
@@ -110,20 +101,16 @@
     vertical-align: middle;
 }
 
-/* label にも垂直中央揃えを追加 */
 .season-list label {
     display: inline-block;
     vertical-align: middle;
-    /* label の垂直方向を中央に揃える */
 }
 
-/* チェックされた時のスタイル */
 .season-list input[type="checkbox"]:checked {
     background-color: #4B4B4B;
     border-color: #4B4B4B;
 }
 
-/* チェックされた時に✓を表示 */
 .season-list input[type="checkbox"]:checked::after {
     content: "✓";
     color: white;
@@ -134,7 +121,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* 下半分: 1カラム */
 .product-detail-bottom {
     display: grid;
     grid-template-rows: auto auto;
@@ -147,19 +133,16 @@
     font-size: 16px;
 }
 
-/* ボタン */
 .button-group {
     display: flex;
-        justify-content: center;
-        
-        gap: 32px;
+    justify-content: center;
+    gap: 32px;
 }
 
 .left-buttons {
     display: flex;
     gap: 10px;
     flex-grow: 1;
-        /* 横幅を均等に */
     width: auto;
 }
 
@@ -190,11 +173,9 @@
     background-color: #DDB400;
 }
 
-/* 右側の削除ボタン */
 .right-buttons {
     display: flex;
     justify-content: flex-end;
-    /* 右に寄せる */
 }
 
 .delete-btn {
@@ -202,7 +183,6 @@
     border: none;
     cursor: pointer;
     width: auto;
-        /* 削除ボタンは幅を設定しない */
 }
 
 .trash-icon {

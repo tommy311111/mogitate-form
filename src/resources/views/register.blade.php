@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
- <div class="container">
-        <h2>商品登録</h2>
+<div class="container">
+    <h2>商品登録</h2>
     <form action="/products" method="POST" enctype="multipart/form-data" novalidate>
         @csrf
         <div class="label-container">
@@ -14,19 +14,19 @@
         </div>
         <input type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}" required>
         <div class="error">
-             @error('name')
-             {{ $message }}
-             @enderror
+            @error('name')
+            {{ $message }}
+            @enderror
         </div>
         
         <div class="label-container">
             <label>値段</label> <span class="required">必須</span>
-        </div>  
+        </div>
         <input type="number" name="price" placeholder="値段を入力" value="{{ old('price') }}" required>
         <div class="error">
-             @error('price')
-             {{ $message }}
-             @enderror
+            @error('price')
+            {{ $message }}
+            @enderror
         </div>
         
         <div class="label-container">
@@ -34,9 +34,9 @@
         </div>
         <input type="file" name="image" required>
         <div class="error">
-             @error('image')
-             {{ $message }}
-             @enderror
+            @error('image')
+            {{ $message }}
+            @enderror
         </div>
         
         <div class="label-container">
@@ -58,19 +58,19 @@
             </label>
         </div>
         <div class="error">
-             @error('season')
-             {{ $message }}
-             @enderror
-        </div>   
+            @error('season')
+            {{ $message }}
+            @enderror
+        </div>
     
         <div class="label-container">
             <label>商品説明</label> <span class="required">必須</span>
         </div>
         <textarea name="description" rows="8" placeholder="商品説明を入力" required>{{ old('description') }}</textarea>
         <div class="error">
-             @error('description')
-             {{ $message }}
-             @enderror
+            @error('description')
+            {{ $message }}
+            @enderror
         </div>
         
         <div class="button-group">
