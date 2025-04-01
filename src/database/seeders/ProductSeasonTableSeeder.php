@@ -15,7 +15,6 @@ class ProductSeasonTableSeeder extends Seeder
      */
     public function run()
     {
-        // 商品ごとの季節データをマッピング
         $productSeasons = [
             'キウイ' => ['秋', '冬'],
             'ストロベリー' => ['春'],
