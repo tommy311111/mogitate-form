@@ -18,10 +18,17 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $keyword = $request->input('keyword');
+        $sort = $request->input('sort');
         $query = Product::query();
 
         if (!empty($keyword)) {
             $query->where('name', 'LIKE', "%{$keyword}%");
+        }
+
+        if ($sort == 'high') {
+        $query->orderBy('price', 'desc'); 
+        } elseif ($sort == 'low') {
+        $query->orderBy('price', 'asc'); 
         }
 
         $products = $query->paginate(6);
