@@ -14,4 +14,4 @@ yarn-error.log
 /.idea
 /.vscode
 !storage/app/public/images/
-!storage/app/public/images/.gitkeep
+!storage/app/public/images/*
